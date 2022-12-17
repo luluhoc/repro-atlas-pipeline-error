@@ -1,0 +1,144 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table User {
+  id String [pk]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  email String [unique, not null]
+  purchases SalesLignes [not null]
+}
+
+Table SalesLignes {
+  id String [pk]
+  codeart String
+  codefab String
+  codefou String
+  libfou String
+  idtypeacompte String
+  idacompte String
+  codefam String
+  codemagasin String
+  codematiere String
+  codeproduit String
+  coderayon String
+  codessfam String
+  codestat5 String
+  codetypehbjo String
+  codetypeproduit String
+  coeff String
+  coeffreprise String
+  coursmatiere String
+  coursmatierereprise String
+  datecdeachat DateTime
+  datederniereutilisationchequecadeau DateTime
+  dateutilisationchequecadeau DateTime
+  datevente DateTime
+  dateventereprise DateTime
+  ligneid String
+  idclient String
+  idsociete String
+  idsocietereprise String
+  idvente String
+  idventereprise String
+  indacompterepris Boolean
+  indacomptereprisreprise Boolean
+  indconfie Boolean
+  indconfiereprise Boolean
+  indrocontreachat Boolean
+  indrocontreachatreprise Boolean
+  indselection Boolean
+  indselectionfusion Boolean
+  indtpb Boolean
+  indtpbreprise Boolean
+  indtrtdivers Boolean
+  indutilisationuniqueanimcommerciale Boolean
+  ischequecadeauinvalide Boolean
+  isencoursclientinvalide Boolean
+  isgestionlot Boolean
+  islignereprise Boolean
+  issav Boolean
+  lib String
+  libfab String
+  libfam String
+  libmagasin String
+  libmatiere String
+  librayon String
+  libssfam String
+  libtypehbjo String
+  libtypeproduit String
+  montantacompteht String
+  montantacomptettc String
+  mtchequecadeau String
+  mtencoursclient String
+  mtrestantavoir String
+  mtrestantchequecadeau String
+  mtrestantencoursclient String
+  mttpb String
+  mttpbreprise String
+  mttva String
+  mttvareprise String
+  mtutiliseavoir String
+  mtutilisechequecadeau String
+  poids String
+  poidsbrut String
+  poidsbrutreprise String
+  poidsreprise String
+  pourcremise String
+  pourcremiseanimcommerciale String
+  pourcremisereprise String
+  pourctpb String
+  pourctpbreprise String
+  pourctva String
+  pourctvareprise String
+  pxachat String
+  pxachatreprise String
+  pxmp String
+  pxmpreprise String
+  pxtheo String
+  pxtheoreprise String
+  pxventeht String
+  pxventehtreprise String
+  pxventettc String
+  pxventettcreprise String
+  qte String
+  qtedisponible String
+  qtereprise String
+  qtestock String
+  reffab String
+  taille String
+  typeligne String
+  commentaire String
+  nochequecadeau String
+  idproduitrachete String
+  idproduitrachetereprise String
+  idtyperemise String
+  typehs String
+  idcauseventehs String
+  idlignereprise String
+  nosachetsav String
+  idsav String
+  user User
+  userId String
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+}
+
+Enum Role {
+  ADMIN
+  USER
+}
+
+Enum Identity {
+  MR
+  MME
+}
+
+Enum RegistrationStatus {
+  STARTED
+  NOT_VERIFIED
+  VERIFIED
+}
+
+Ref: SalesLignes.userId > User.id
