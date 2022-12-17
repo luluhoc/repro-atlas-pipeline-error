@@ -121,6 +121,6 @@ export class AppService {
         ...toSend,
       },
     });
-    return 'Hello World!';
+    return 'Hello Cruel World!';
   }
 }
